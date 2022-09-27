@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Sidebar } from './Sidebar';
+import { Footer } from './Footer';
+import { TopBar, Link } from './TopBar';
+import { ContentBox } from './ContentBox';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Sidebar />
+      <main className="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
+        <TopBar
+          title="Open Source"
+          breadcrumbs={[
+            { label: "Baylee Dev", href: "https://baylee.dev" } as Link
+          ]}
+        />
+        <div className="container-fluid py-4">
+          <ContentBox widthLg={12} widthMd={12} title="Project">
+            Hello world!
+          </ContentBox>
+          <Footer />
+        </div>
+      </main>
+    </>
   );
 }
 

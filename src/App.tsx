@@ -1,8 +1,8 @@
 import React from 'react';
-import { Sidebar } from './Sidebar';
-import { Footer } from './Footer';
-import { TopBar, Link } from './TopBar';
-import { ContentBox } from './ContentBox';
+import { Sidebar } from './components/Sidebar';
+import { Footer } from './components/Footer';
+import { TopBar, Link } from './components/TopBar';
+import { ContentBox } from './components/ContentBox';
 import './App.css';
 
 function App() {

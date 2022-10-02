@@ -8,31 +8,31 @@ gh-pages easily!
 Clone the template
 
 ```
-git clone git@github.com:bayleedev/material-dashboard.git project_name
-cd project_name
+git clone git@github.com:bayleedev/material-dashboard.git PROJECT_NAME
+cd PROJECT_NAME
 ```
 
 Update the port
 
 ```
-sed "s/3125/3$(date '+%s' | rev | cut -c -3)/g" package.json > package.json
+npm run reroll-port
 ```
 
 Update git
 
 ```
-npm install
 rm -rf .git
 git init
 git add --all
 git commit -m '🥳 Initial commit'
-git remote add origin NEW_ORIGIN
+git remote add origin PROJECT_ORIGIN
+git push
 ```
 
 Initial deploy
 
 ```
-git push
+npm install
 npm run deploy
 ```
 
